@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Resource</title>
+</head>
+
+<body>
+
+<h1>Add Learning Resource</h1>
+
+
+
+<p>
+<a href="/teacher">Back to Dashboard</a>
+</p>
+
+
+
+<form action="/save-resource" method="POST">
+
+    <p>
+        Resource Title
+        <br>
+        <input type="text" name="resource_title" required>
+    </p>
+
+    <p>
+        Resource Type
+        <br>
+
+        <select name="resource_type">
+
+            <option>Book</option>
+            <option>Video</option>
+            <option>PDF</option>
+            <option>Website</option>
+            <option>Course</option>
+
+        </select>
+
+    </p>
+
+    <p>
+        Topic ID
+        <br>
+        <input type="number" name="topic_id" required>
+    </p>
+
+    <p>
+        Resource Link
+        <br>
+        <input type="text" name="resource_link" required>
+    </p>
+
+    <input
+        type="submit"
+        value="Add Resource">
+
+</form>
+
+</body>
+</html>

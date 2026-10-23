@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Assessment Certificate</title>
+
+    <style>
+
+        body{
+            font-family: "Times New Roman", serif;
+            text-align:center;
+            padding:40px;
+        }
+
+        .certificate{
+            border:5px solid black;
+            padding:40px;
+            width:80%;
+            margin:auto;
+        }
+
+        h1{
+            font-size:42px;
+        }
+
+        h2{
+            font-size:36px;
+        }
+
+        .name{
+            font-size:32px;
+            font-weight:bold;
+            text-decoration:underline;
+            margin:20px;
+        }
+
+        .career{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .footer{
+            margin-top:60px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="certificate">
+
+    <h1>CERTIFICATE OF COMPLETION</h1>
+
+    <hr>
+
+    <p>This certificate is proudly presented to</p>
+
+    <div class="name">
+    {{ student_name }}
+</div>
+
+    <p>
+        for successfully completing the
+        Learning Path Recommendation Assessment
+    </p>
+
+    <br>
+
+    <p>Recommended Career</p>
+
+    <div class="career">
+        {{ career_name }}
+    </div>
+
+    <br>
+
+    <p>
+        Final Score:
+        <strong>{{ score }}</strong>
+    </p>
+
+    <div class="footer">
+
+        <p>
+            Learning Path Recommendation System
+        </p>
+
+        <p>
+            Date Issued:
+            {{ date }}
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Learning Path Recommendation System</title>
+    <style>
+        .login-box {
+            width: 300px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Learning Path Recommendation System</h1>
+
+   <hr>
+
+    <p>
+        <a href="/">Home</a> |
+        <a href="/login">Login</a> |
+        <a href="/signup">Sign Up</a>
+    </p>
+
+    
+
+    <div class="login-box">
+
+        <h2>Login</h2>
+
+        <form action="/authenticate" method="POST">
+
+            <p>
+                Username<br>
+                <input type="text" name="username">
+            </p>
+
+            <p>
+                Password<br>
+                <input type="password" name="password">
+            </p>
+
+            <p>
+                <input type="submit" value="Login">
+            </p>
+
+        </form>
+
+        <p>
+            Don't have an account?
+            <a href="/signup">Create Account</a>
+        </p>
+
+    </div>
+
+</body>
+</html>

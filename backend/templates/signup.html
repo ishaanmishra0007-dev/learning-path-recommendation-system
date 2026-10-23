@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account - Learning Path Recommendation System</title>
+    <style>
+        .signup-box {
+            width: 300px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .signup-box input[type="text"],
+        .signup-box input[type="email"],
+        .signup-box input[type="password"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .role-options {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Learning Path Recommendation System</h1>
+
+    <hr>
+
+    <p>
+        <a href="/">Home</a> |
+        <a href="/login">Login</a> |
+        <a href="/signup">Sign Up</a>
+    </p>
+
+    
+
+    <div class="signup-box">
+
+        <h2>Create Account</h2>
+
+        <form action="/register" method="POST">
+
+            <p>
+                Full Name<br>
+                <input type="text" name="full_name">
+            </p>
+
+            <p>
+                Username<br>
+                <input type="text" name="username">
+            </p>
+
+            <p>
+                Email<br>
+                <input type="email" name="email">
+            </p>
+
+            <p>
+                Password<br>
+                <input type="password" name="password">
+            </p>
+
+            <p>
+                Confirm Password<br>
+                <input type="password" name="confirm_password">
+            </p>
+
+            <p>
+                Role
+            </p>
+
+            <p class="role-options">
+                <input type="radio" name="role" value="student"> Student
+                <br>
+                <input type="radio" name="role" value="teacher"> Teacher
+            </p>
+
+            <p>
+                <input type="submit" value="Create Account">
+            </p>
+
+        </form>
+
+     
+
+        <p>
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+
+    </div>
+
+</body>
+</html>

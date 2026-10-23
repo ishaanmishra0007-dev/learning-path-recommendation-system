@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Recommendation</title>
+</head>
+
+<body>
+
+    <h1>Learning Path Recommendation System</h1>
+
+    <p>
+        <a href="/student">Dashboard</a> |
+        <a href="/login">Logout</a>
+    </p>
+
+
+    <h2>Career Recommendation</h2>
+
+    <p>
+        <strong>Recommended Career:</strong>
+        {{ career_name }}
+    </p>
+
+    <p>
+        {{ description }}
+    </p>
+
+    <p>
+        <strong>Compatibility Score:</strong>
+        {{ score }}
+    </p>
+
+
+    <h2>Your Learning Roadmap</h2>
+
+    <p>
+        Follow these steps in order:
+    </p>
+
+    <ol>
+
+        {% for topic in topics %}
+
+        <li>
+            <strong>{{ topic[0] }}</strong>
+            <br>
+            Complete this topic before moving to the next step.
+            <br><br>
+        </li>
+
+        {% endfor %}
+
+    </ol>
+
+    <h3>Next Actions</h3>
+
+    <ul>
+        <li>Study the recommended topics.</li>
+        <li>Use books and learning resources.</li>
+        <li>Complete projects.</li>
+        <li>Track your progress.</li>
+        <li>Generate your certificate.</li>
+    </ul>
+
+
+    <form action="/certificate" method="POST">
+
+        <input
+            type="hidden"
+            name="career_name"
+            value="{{ career_name }}">
+
+        <input
+            type="hidden"
+            name="score"
+            value="{{ score }}">
+
+        <input
+            type="submit"
+            value="Generate Certificate">
+
+    </form>
+
+</body>
+</html>
